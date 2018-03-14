@@ -326,6 +326,19 @@ public class CarbonUtils {
         return componentsRepo;
     }
 
+    public static String getCarbonInternalLibDir() {
+        String internalLibDir = System.getProperty(CarbonBaseConstants.CARBON_INTERNAL_LIB_DIR_PATH);
+        if (internalLibDir == null) {
+            internalLibDir = System.getenv(CarbonConstants.CARBON_INTERNAL_LIB_DIR_PATH);
+            if (internalLibDir == null) {
+                return getCarbonHome() + File.separator + REPOSITORY + File.separator +
+                        "components" + File.separator + "lib";
+            }
+
+        }
+        return internalLibDir;
+    }
+
     public static String getCarbonOSGiDropinsDir() {
         String dropinsPath = System.getProperty(CarbonBaseConstants.CARBON_DROPINS_DIR_PATH);
         if (dropinsPath == null) {

@@ -358,7 +358,8 @@ public final class CarbonConstants {
     public static final String CARBON_LOGS_PATH_ENV = "CARBON_LOGS";
     public static final String AXIS2_REPO_ENV = "AXIS2_REPO";
     public static final String COMPONENT_REP0_ENV = "COMPONENTS_REPO";
-    
+    public static final String CARBON_INTERNAL_LIB_DIR_PATH = "CARBON_INTERNAL_LIB_DIR_PATH";
+
     public static final String AUTHENTICATOR_TYPE = "authenticator.type";
     
     // A Service group parameter
